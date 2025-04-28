@@ -1,5 +1,6 @@
 
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 const nailDesigns = [
   {
@@ -46,16 +47,21 @@ const NailGallery = () => {
       {nailDesigns.map((design) => (
         <Card 
           key={design.id} 
-          className="overflow-hidden hover-scale"
+          className="overflow-hidden hover-scale shadow-md hover:shadow-xl transition-all"
         >
-          <img 
-            src={design.image} 
-            alt={design.title} 
-            className="w-full h-64 object-cover"
-          />
-          <div className="p-4">
+          <div className="overflow-hidden h-64">
+            <img 
+              src={design.image} 
+              alt={design.title} 
+              className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+            />
+          </div>
+          <div className="p-5">
             <h3 className="text-xl font-bold text-purple-900 mb-2">{design.title}</h3>
-            <p className="text-purple-700">{design.description}</p>
+            <p className="text-purple-700 mb-4">{design.description}</p>
+            <Button variant="outline" className="w-full border-purple-300 text-purple-700 hover:bg-purple-100">
+              Подробнее
+            </Button>
           </div>
         </Card>
       ))}

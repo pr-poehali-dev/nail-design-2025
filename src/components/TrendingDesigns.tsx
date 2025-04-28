@@ -5,21 +5,21 @@ import { Badge } from "@/components/ui/badge";
 const trendingDesigns = [
   {
     id: 1,
-    title: "Магнитный эффект",
-    image: "https://images.unsplash.com/photo-1641889577710-20497957f50a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-    tags: ["тренд 2025", "популярное"]
+    title: "Хрустальный маникюр",
+    image: "https://images.unsplash.com/photo-1604654894610-df63bc536371?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+    tags: ["тренд 2025", "хит сезона"]
   },
   {
     id: 2,
     title: "Голографические блестки",
     image: "https://images.unsplash.com/photo-1636018051001-bc021b53ff85?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-    tags: ["тренд 2025"]
+    tags: ["тренд 2025", "вечерний"]
   },
   {
     id: 3,
-    title: "Прозрачные элементы",
-    image: "https://images.unsplash.com/photo-1581954767938-0c889be09ab9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-    tags: ["эксклюзив"]
+    title: "Абстрактные узоры",
+    image: "https://images.unsplash.com/photo-1595116871872-508408608f25?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+    tags: ["эксклюзив", "новинка"]
   }
 ];
 
@@ -27,12 +27,12 @@ const TrendingDesigns = () => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
       {trendingDesigns.map((design) => (
-        <Card key={design.id} className="overflow-hidden group relative">
-          <div className="overflow-hidden">
+        <Card key={design.id} className="overflow-hidden group relative shadow-md hover:shadow-xl transition-all">
+          <div className="overflow-hidden h-80">
             <img 
               src={design.image} 
               alt={design.title} 
-              className="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-110"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
           </div>
           <div className="p-4">
